@@ -1,0 +1,22 @@
+# Persona Studio — always-on cloud / home server
+# Usage: XAI_API_KEY=your-key docker compose up -d
+# Open http://localhost:7860 or your server's public IP
+
+services:
+  persona-studio:
+    build: .
+    ports:
+      - "7860:7860"
+    environment:
+      - XAI_API_KEY=${XAI_API_KEY}
+      - PERSONA_CLOUD=true
+      - PERSONA_BIND_HOST=0.0.0.0
+      - PERSONA_REMOTE=true
+      - PERSONA_SHARE=false
+      - PERSONA_PUBLIC_URL=${PERSONA_PUBLIC_URL:-}
+    volumes:
+      - persona-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  persona-data:

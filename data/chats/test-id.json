@@ -1,0 +1,14 @@
+{
+  "session_key": "test-id",
+  "active_persona_ids": [
+    "test-id"
+  ],
+  "reply_as_id": "test-id",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hello"
+    }
+  ],
+  "updated_at": "2026-06-19T12:54:00.474627+00:00"
+}

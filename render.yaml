@@ -1,0 +1,25 @@
+# Render Blueprint — one-click 24/7 deploy
+# Dashboard: New > Blueprint > connect this repo > apply this file
+# Or: New > Web Service > Docker > point at this repo
+
+services:
+  - type: web
+    name: persona-studio
+    runtime: docker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: XAI_API_KEY
+        sync: false
+      - key: PERSONA_CLOUD
+        value: "true"
+      - key: PERSONA_BIND_HOST
+        value: "0.0.0.0"
+      - key: PERSONA_REMOTE
+        value: "true"
+      - key: PERSONA_SHARE
+        value: "false"
+    disk:
+      name: persona-data
+      mountPath: /app/data
+      sizeGB: 1

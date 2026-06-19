@@ -1,0 +1,16 @@
+{
+  "running": true,
+  "pid": 16592,
+  "port": 7860,
+  "url": "http://192.168.1.4:7860",
+  "urls": {
+    "port": 7860,
+    "local": "http://127.0.0.1:7860",
+    "lan": "http://192.168.1.4:7860",
+    "public": null,
+    "public_type": "gradio",
+    "custom": null,
+    "updated_at": "2026-06-19T21:06:18.401028+00:00"
+  },
+  "updated_at": "2026-06-19T21:06:18.401028+00:00"
+}

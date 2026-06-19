@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persona Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hero-header">
+      <div class="hero-top">
+        <h1>✦ Persona Studio</h1>
+        <div class="server-controls">
+          <span id="server-status" class="status-pill offline">Checking server…</span>
+          <button id="btn-open-app" class="btn btn-sm" type="button" hidden>Open Full App</button>
+        </div>
+      </div>
+      <p class="hero-sub">
+        Premium character roleplay — live mood modes, multi-character chat, Tagalog/Taglish,
+        scene control, selfie replies, and 10 GB memory.
+      </p>
+      <div class="feature-badges">
+        <span class="feature-badge">🌀 Hypnotized mode</span>
+        <span class="feature-badge">😏 Flirty & romantic</span>
+        <span class="feature-badge">📸 Smart selfies</span>
+        <span class="feature-badge">🌐 Taglish</span>
+        <span class="feature-badge">🧠 10 GB memory</span>
+      </div>
+      <div id="api-status" class="status-row"></div>
+      <div id="links-banner" class="links-banner" hidden></div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar panel">
+        <h2>Characters</h2>
+
+        <label class="field-label" for="persona-select">Select Character</label>
+        <select id="persona-select" class="select"></select>
+
+        <label class="checkbox-row">
+          <input id="in-chat-toggle" type="checkbox">
+          <span>In this chat</span>
+        </label>
+
+        <div id="persona-list" class="persona-list"></div>
+
+        <div class="btn-row">
+          <button id="btn-duplicate" class="btn btn-sm" type="button">Duplicate</button>
+          <button id="btn-delete" class="btn btn-sm btn-danger" type="button">Delete</button>
+        </div>
+
+        <hr class="divider">
+
+        <h3>New Character</h3>
+        <label class="field-label" for="new-name">Name</label>
+        <input id="new-name" class="input" type="text" placeholder="e.g. Gojo Satoru, Taylor Swift">
+
+        <label class="field-label" for="new-type">Type</label>
+        <select id="new-type" class="select">
+          <option value="anime">Anime</option>
+          <option value="real">Real</option>
+          <option value="fictional">Fictional</option>
+        </select>
+
+        <label class="field-label" for="new-lang">Language</label>
+        <select id="new-lang" class="select">
+          <option value="auto">Auto — match user</option>
+          <option value="english">English</option>
+          <option value="tagalog">Tagalog</option>
+          <option value="taglish">Taglish</option>
+        </select>
+
+        <label class="checkbox-row">
+          <input id="auto-research" type="checkbox" checked>
+          <span>Auto-research online on create</span>
+        </label>
+
+        <button id="btn-create" class="btn btn-primary glow" type="button">Create Character</button>
+
+        <hr class="divider">
+
+        <h3>Reference Photos</h3>
+        <p id="ref-count" class="hint">0/10 references</p>
+        <div id="ref-gallery" class="gallery"></div>
+        <label class="btn btn-sm upload-btn">
+          Add Photos
+          <input id="ref-upload" type="file" accept="image/*" multiple hidden>
+        </label>
+      </aside>
+
+      <section class="main panel">
+        <div id="chat-summary" class="chat-summary"></div>
+
+        <div class="mood-panel">
+          <p class="section-label">Live Mode Control</p>
+          <div class="mood-grid">
+            <div>
+              <label class="field-label" for="session-mood">Mood</label>
+              <select id="session-mood" class="select"></select>
+            </div>
+            <div>
+              <label class="field-label" for="session-relationship">Relationship</label>
+              <select id="session-relationship" class="select"></select>
+            </div>
+            <div>
+              <label class="field-label" for="session-intensity">Intensity</label>
+              <input id="session-intensity" class="range" type="range" min="1" max="10" value="5">
+              <span id="intensity-value" class="intensity-value">5/10</span>
+            </div>
+          </div>
+          <p id="vibe-status" class="vibe-status"></p>
+        </div>
+
+        <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+
+        <label class="field-label" for="scene-input">Scene / Setting</label>
+        <input id="scene-input" class="input" type="text" placeholder="e.g. Late night texts, coffee shop in Manila…">
+
+        <div class="chat-options">
+          <div>
+            <label class="field-label" for="reply-as">Reply as</label>
+            <select id="reply-as" class="select"></select>
+          </div>
+          <label class="checkbox-row">
+            <input id="search-toggle" type="checkbox">
+            <span>Web search</span>
+          </label>
+          <label class="checkbox-row">
+            <input id="multi-respond" type="checkbox">
+            <span>Everyone responds</span>
+          </label>
+        </div>
+
+        <p class="section-label">Vibe & Quick Actions</p>
+        <div class="chip-row" id="vibe-chips">
+          <button class="chip chip-hypno" data-mood="hypnotized" data-msg="Your eyes feel heavy… you're completely relaxed with me. Tell me what you're feeling right now, slowly." type="button">🌀 Hypnotized</button>
+          <button class="chip" data-mood="flirty" data-msg="You've been on my mind… what would you say if I was right there with you?" type="button">😏 Flirty</button>
+          <button class="chip" data-mood="romantic" data-msg="I want something real from you — how do you really feel about us?" type="button">💕 Romantic</button>
+          <button class="chip" data-mood="seductive" data-msg="Come closer. Say something that would make me lose focus on everything else." type="button">🔥 Seductive</button>
+          <button class="chip" data-mood="playful" data-msg="Surprise me — say or do something completely unexpected." type="button">🎭 Playful</button>
+        </div>
+        <div class="chip-row" id="action-chips">
+          <button class="chip" data-msg="Send me a photo of yourself" type="button">📸 Selfie</button>
+          <button class="chip" data-msg="Describe where we are right now — paint the scene for me." type="button">🌆 Scene</button>
+          <button class="chip" data-msg="Tell me something from your past that shaped who you are." type="button">📖 Backstory</button>
+          <button class="chip" data-msg="I want to see what you look like right now — send me a pic!" type="button">🖼 Photo react</button>
+          <button class="chip chip-intense" data-intense="true" type="button">⚡ Intense</button>
+        </div>
+
+        <div class="composer">
+          <textarea id="chat-input" class="textarea" rows="2" placeholder="Chat here… attach a photo or paste Ctrl+V"></textarea>
+          <label class="btn btn-sm attach-btn" title="Attach image">
+            📎
+            <input id="image-upload" type="file" accept="image/*" multiple hidden>
+          </label>
+        </div>
+        <div id="pending-images" class="pending-images"></div>
+
+        <div class="composer-actions">
+          <button id="btn-suggest" class="btn btn-sm" type="button">💡 Suggest replies</button>
+          <select id="suggestion-select" class="select suggestion-select"></select>
+          <button id="btn-use-suggestion" class="btn btn-sm" type="button">Use</button>
+        </div>
+
+        <div class="composer-actions main-actions">
+          <button id="btn-send" class="btn btn-primary glow" type="button">Send</button>
+          <button id="btn-regen" class="btn" type="button">↻ Regenerate</button>
+          <button id="btn-clear" class="btn btn-danger" type="button">Clear Chat</button>
+        </div>
+
+        <div id="context-box" class="context-box" hidden></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="loading" class="loading-overlay" hidden>
+    <div class="spinner"></div>
+    <p>Thinking…</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

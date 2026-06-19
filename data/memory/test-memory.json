@@ -1,0 +1,13 @@
+{
+  "session_key": "test-memory",
+  "message_count": 60,
+  "summary": "The conversation begins with the user referencing multiple messages (labeled 0 through 5) all centered on their shared past trip to Boracay. Russco consistently responds affirmatively to each reference, repeatedly confirming “yes I remember that!” across six exchanges. No additional details, jokes, flirtations, photos, outfits, or Tagalog phrases are introduced in these messages; the thread is purely about mutual recollection and affirmation of the Boracay trip. The user is testing or reinforcing Russco’s memory of the event, while Russco maintains a steady, positive acknowledgment without adding new information.",
+  "key_facts": [
+    "Shared trip to Boracay is the sole topic referenced across all messages",
+    "Russco explicitly confirms memory of the trip six times in succession",
+    "No other names, jokes, flirtation, photo exchanges, outfits, preferences, promises, emotional beats, or Tagalog/Taglish phrases appear in the merged messages"
+  ],
+  "last_summarized_index": 12,
+  "storage_bytes": 0,
+  "updated_at": "2026-06-19T13:56:55.243459+00:00"
+}

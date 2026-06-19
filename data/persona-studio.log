@@ -1,0 +1,215 @@
+[2026-06-19 15:14:03] Spawned background process (pid 29588, tray=False)
+[2026-06-19 15:14:24] Server starting on http://127.0.0.1:7860 (pid 4632)
+[2026-06-19 15:14:25] Daemon exiting
+[2026-06-19 15:14:39] Server starting on http://127.0.0.1:7860 (pid 2952)
+[2026-06-19 15:14:40] Server ready at http://127.0.0.1:7860
+[2026-06-19 15:14:58] Stopped daemon (pid 2952)
+[2026-06-19 15:15:00] Spawned background process (pid 10616, tray=False)
+
+--- spawn 2026-06-19T15:15:53.754202+00:00 ---
+[2026-06-19 15:15:53] Spawned background process (pid 19060, tray=False)
+[2026-06-19 15:15:53] Worker boot pid=19060 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:15:56] Server starting on http://127.0.0.1:7860 (pid 19060)
+[2026-06-19 15:16:11] Worker boot pid=22216 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['daemon.py', 'run', '--no-tray']
+[2026-06-19 15:16:13] Server starting on http://127.0.0.1:7860 (pid 22216)
+[2026-06-19 15:16:14] Server ready at http://127.0.0.1:7860
+[2026-06-19 15:16:39] Stopped daemon (pid 22216)
+[2026-06-19 15:16:41] --- spawn 2026-06-19T15:16:41.169209+00:00 ---
+[2026-06-19 15:16:41] Spawned background process (pid 5916, tray=False)
+[2026-06-19 15:16:41] Worker boot pid=5916 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:16:43] Server starting on http://127.0.0.1:7860 (pid 5916)
+[2026-06-19 15:17:10] --- spawn 2026-06-19T15:17:10.092040+00:00 ---
+[2026-06-19 15:17:10] Spawned background process (pid 10308, tray=False)
+[2026-06-19 15:17:10] Worker boot pid=10308 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:17:12] Server starting on http://127.0.0.1:7860 (pid 10308)
+[2026-06-19 15:17:13] FATAL: Traceback (most recent call last):
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\logging\config.py", line 587, in configure
+    formatters[name] = self.configure_formatter(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\logging\config.py", line 699, in configure_formatter
+    result = self.configure_custom(config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\logging\config.py", line 490, in configure_custom
+    result = c(**kwargs)
+             ^^^^^^^^^^^
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\logging.py", line 42, in __init__
+    self.use_colors = sys.stdout.isatty()
+                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'isatty'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Christian\.grok\bin\persona-studio\daemon.py", line 309, in run_server
+    demo.launch(
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\blocks.py", line 2952, in launch
+    ) = http_server.start_server(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\http_server.py", line 143, in start_server
+    config = uvicorn.Config(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\config.py", line 284, in __init__
+    self.configure_logging()
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\config.py", line 379, in configure_logging
+    logging.config.dictConfig(self.log_config)
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\logging\config.py", line 942, in dictConfig
+    dictConfigClass(config).configure()
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\logging\config.py", line 590, in configure
+    raise ValueError('Unable to configure '
+ValueError: Unable to configure formatter 'default'
+
+[2026-06-19 15:17:13] Daemon exiting
+[2026-06-19 15:17:54] --- spawn 2026-06-19T15:17:54.502364+00:00 ---
+[2026-06-19 15:17:54] Spawned background process (pid 10836, tray=False)
+[2026-06-19 15:17:54] Worker boot pid=10836 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:17:57] Server starting on http://127.0.0.1:7860 (pid 10836)
+[2026-06-19 15:17:58] Server ready at http://127.0.0.1:7860
+[2026-06-19 15:18:26] --- spawn 2026-06-19T15:18:26.831357+00:00 ---
+[2026-06-19 15:18:26] Spawned background process (pid 22724, tray=False)
+[2026-06-19 15:18:26] Worker boot pid=28288 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:18:29] Server starting on http://127.0.0.1:7860 (pid 28288)
+[2026-06-19 15:18:30] Server ready at http://127.0.0.1:7860
+[2026-06-19 15:20:14] --- spawn 2026-06-19T15:20:14.510403+00:00 ---
+[2026-06-19 15:20:14] Spawned background process (pid 8212, tray=False)
+[2026-06-19 15:20:14] Worker boot pid=18844 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:20:17] Server starting on http://127.0.0.1:7860 (pid 18844)
+[2026-06-19 15:20:18] Server ready at http://127.0.0.1:7860
+[2026-06-19 15:20:50] --- spawn 2026-06-19T15:20:50.808251+00:00 ---
+[2026-06-19 15:20:50] Spawned background process (pid 10948, tray=False)
+[2026-06-19 15:20:50] Worker boot pid=26388 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:20:53] Server starting on http://127.0.0.1:7860 (pid 26388)
+[2026-06-19 15:20:53] Server ready at http://127.0.0.1:7860
+[2026-06-19 15:22:12] --- spawn 2026-06-19T15:22:12.773837+00:00 ---
+[2026-06-19 15:22:13] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:23:13] --- spawn 2026-06-19T15:23:13.331335+00:00 ---
+[2026-06-19 15:23:13] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:23:50] Worker boot pid=29352 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\pythonw.exe argv=['daemon.py', 'run']
+[2026-06-19 15:23:57] Worker boot pid=16584 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\pythonw.exe argv=['daemon.py', 'run']
+[2026-06-19 15:24:04] Server starting on http://127.0.0.1:7860 (pid 16584)
+[2026-06-19 15:24:04] Server starting on http://127.0.0.1:7860 (pid 29352)
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 7860): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted
+[2026-06-19 15:24:08] Server ready at http://127.0.0.1:7860
+[2026-06-19 15:24:08] Server ready at http://127.0.0.1:7860
+Exception in thread gradio-server:
+Traceback (most recent call last):
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Christian\.grok\bin\persona-studio\daemon.py", line 347, in _blocking_launch
+    demo.launch(prevent_thread_lock=False, **launch_kwargs)
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\blocks.py", line 2952, in launch
+    ) = http_server.start_server(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\http_server.py", line 182, in start_server
+    raise OSError(
+OSError: Cannot find empty port in range: 7860-7860. You can specify a different port by setting the GRADIO_SERVER_PORT environment variable or passing the `server_port` parameter to `launch()`.
+C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\routes.py:1379: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+  return await queue_join_helper(body, request, username)
+C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\routes.py:1379: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+  return await queue_join_helper(body, request, username)
+[2026-06-19 15:27:54] Quit requested from tray
+[2026-06-19 15:29:06] --- spawn 2026-06-19T15:29:06.970050+00:00 ---
+[2026-06-19 15:29:07] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:29:42] Quit requested from tray
+[2026-06-19 15:30:14] --- spawn 2026-06-19T15:30:14.773474+00:00 ---
+[2026-06-19 15:30:15] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:31:20] --- spawn 2026-06-19T15:31:20.242670+00:00 ---
+[2026-06-19 15:31:20] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:31:47] --- spawn 2026-06-19T15:31:47.344050+00:00 ---
+[2026-06-19 15:31:47] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:32:43] --- spawn 2026-06-19T15:32:43.161323+00:00 ---
+[2026-06-19 15:32:43] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:34:14] --- spawn 2026-06-19T15:34:14.479661+00:00 ---
+[2026-06-19 15:34:14] Spawned background process (pid 1, tray=True)
+[2026-06-19 15:35:58] --- spawn 2026-06-19T15:35:58.482931+00:00 ---
+[2026-06-19 15:35:58] Spawned background process (pid 13064, tray=True)
+[2026-06-19 15:35:58] Worker boot pid=13064 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:36:01] Server starting on port 7860 (pid 13064)
+[2026-06-19 15:36:01] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 15:36:16] --- spawn 2026-06-19T15:36:16.667840+00:00 ---
+[2026-06-19 15:36:16] Spawned background process (pid 7572, tray=False)
+[2026-06-19 15:36:16] Worker boot pid=7572 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:36:19] Server starting on port 7860 (pid 7572)
+[2026-06-19 15:36:20] Server ready — local http://127.0.0.1:7860 | LAN http://192.168.1.4:7860 | public None
+[2026-06-19 15:36:35] Worker boot pid=21352 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['daemon.py', 'run', '--no-tray']
+[2026-06-19 15:36:37] Server starting on port 7860 (pid 21352)
+[2026-06-19 15:36:39] Server ready — local http://127.0.0.1:7860 | LAN http://192.168.1.4:7860 | public None
+[2026-06-19 15:36:59] Stopped daemon (pid 21352)
+[2026-06-19 15:37:04] Worker boot pid=23440 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:37:06] Server starting on port 7860 (pid 23440)
+[2026-06-19 15:37:08] Server ready — local http://127.0.0.1:7860 | LAN http://192.168.1.4:7860 | public None
+[2026-06-19 15:37:12] Stopped daemon (pid 23440)
+[2026-06-19 15:37:18] Worker boot pid=19968 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:37:20] Server starting on port 7860 (pid 19968)
+[2026-06-19 15:37:22] Server ready — local http://127.0.0.1:7860 | LAN http://192.168.1.4:7860 | public None
+[2026-06-19 15:37:25] Stopped daemon (pid 19968)
+[2026-06-19 15:37:29] --- spawn 2026-06-19T15:37:29.433530+00:00 ---
+[2026-06-19 15:37:29] Spawned background process (pid 8372, tray=False)
+[2026-06-19 15:37:29] Worker boot pid=8372 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:37:32] Server starting on port 7860 (pid 8372)
+[2026-06-19 15:37:33] Server ready — local http://127.0.0.1:7860 | LAN http://192.168.1.4:7860 | public None
+[2026-06-19 15:37:48] --- spawn 2026-06-19T15:37:48.588107+00:00 ---
+[2026-06-19 15:37:48] Spawned background process (pid 25672, tray=True)
+[2026-06-19 15:37:48] Worker boot pid=25672 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:37:51] Server starting on port 7860 (pid 25672)
+[2026-06-19 15:37:52] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 15:38:16] --- spawn 2026-06-19T15:38:16.900672+00:00 ---
+[2026-06-19 15:38:16] Spawned background process (pid 31364, tray=False)
+[2026-06-19 15:38:16] Worker boot pid=31364 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run', '--no-tray']
+[2026-06-19 15:38:19] Server starting on port 7860 (pid 31364)
+[2026-06-19 15:38:20] Server ready — local http://127.0.0.1:7860 | LAN http://192.168.1.4:7860 | public None
+[2026-06-19 15:39:01] --- spawn 2026-06-19T15:39:01.503276+00:00 ---
+[2026-06-19 15:39:01] Spawned background process (pid 21488, tray=True)
+[2026-06-19 15:39:01] Worker boot pid=21488 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:39:04] Server starting on port 7860 (pid 21488)
+[2026-06-19 15:39:05] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 15:39:34] --- spawn 2026-06-19T15:39:34.857578+00:00 ---
+[2026-06-19 15:39:34] Spawned background process (pid 30020, tray=True)
+[2026-06-19 15:39:34] Worker boot pid=30020 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:39:37] Server starting on port 7860 (pid 30020)
+[2026-06-19 15:39:38] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 15:40:09] --- spawn 2026-06-19T15:40:09.991382+00:00 ---
+[2026-06-19 15:40:09] Spawned background process (pid 15912, tray=True)
+[2026-06-19 15:40:10] Worker boot pid=15912 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:40:12] Server starting on port 7860 (pid 15912)
+[2026-06-19 15:40:13] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 15:40:43] --- spawn 2026-06-19T15:40:43.123457+00:00 ---
+[2026-06-19 15:40:43] Spawned background process (pid 14028, tray=True)
+[2026-06-19 15:40:43] Worker boot pid=14028 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:40:45] Server starting on port 7860 (pid 14028)
+[2026-06-19 15:40:46] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 15:42:18] --- spawn 2026-06-19T15:42:18.496119+00:00 ---
+[2026-06-19 15:42:18] Spawned background process (pid 24648, tray=True)
+[2026-06-19 15:42:18] Worker boot pid=24648 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:42:21] Server starting on port 7860 (pid 24648)
+[2026-06-19 15:42:22] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 15:43:19] Worker boot pid=25528 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['daemon.py', 'run', '--no-tray']
+[2026-06-19 15:43:22] Server starting on port 7860 (pid 25528)
+[2026-06-19 15:43:23] Server ready — local http://127.0.0.1:7860 | LAN http://192.168.1.4:7860 | public None
+[2026-06-19 15:57:03] --- spawn 2026-06-19T15:57:03.848367+00:00 ---
+[2026-06-19 15:57:03] Spawned background process (pid 12752, tray=True)
+[2026-06-19 15:57:03] Worker boot pid=12752 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 15:57:06] Server starting on port 7860 (pid 12752)
+[2026-06-19 15:57:07] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 20:52:35] Worker boot pid=2020 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\pythonw.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 20:53:14] Server starting on port 7860 (pid 2020)
+[2026-06-19 20:53:18] Server ready — best link: http://192.168.1.4:7860
+* Running on public URL: https://6eb6af0b6a1c6ccdeb.gradio.live
+C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\routes.py:1379: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+  return await queue_join_helper(body, request, username)
+C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\routes.py:1379: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+  return await queue_join_helper(body, request, username)
+C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\routes.py:1379: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+  return await queue_join_helper(body, request, username)
+C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\routes.py:1379: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+  return await queue_join_helper(body, request, username)
+C:\Users\Christian\AppData\Local\Programs\Python\Python312\Lib\site-packages\gradio\routes.py:1379: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+  return await queue_join_helper(body, request, username)
+[2026-06-19 21:06:00] Quit requested from tray
+[2026-06-19 21:06:14] --- spawn 2026-06-19T21:06:14.615727+00:00 ---
+[2026-06-19 21:06:14] Spawned background process (pid 16592, tray=True)
+[2026-06-19 21:06:14] Worker boot pid=16592 exe=C:\Users\Christian\AppData\Local\Programs\Python\Python312\python.exe argv=['C:\\Users\\Christian\\.grok\\bin\\persona-studio\\daemon.py', 'run']
+[2026-06-19 21:06:17] Server starting on port 7860 (pid 16592)
+[2026-06-19 21:06:18] Server ready — best link: http://192.168.1.4:7860
+[2026-06-19 21:28:52] Quit requested from tray
