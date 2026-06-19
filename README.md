@@ -1,110 +1,116 @@
-# Persona Studio
+# The Modernist theme
 
-Chat, search, and create images while roleplaying as anyone — anime characters, real people, or your own originals. Personas stay **in character** instead of sounding like an AI.
+[![.github/workflows/ci.yaml](https://github.com/pages-themes/modernist/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/modernist/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-modernist.svg)](https://badge.fury.io/rb/jekyll-theme-modernist)
 
-## Features
+*Modernist is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/modernist), or even [use it today](#usage).*
 
-- **In-character chat** — replies as the person/character, not as an assistant
-- **Web research** — auto-research personalities, quotes, and backgrounds online
-- **Reference photo upload** — upload images so likeness and vibe match who you want
-- **Image generation & editing** — create new art or edit photos (real people use edit mode with references)
-- **Image search** — find reference images online and download them
+![Thumbnail of Modernist](thumbnail.png)
 
-## Quick Start
+## Usage
 
-### 1. Install dependencies
+To use the Modernist theme:
 
-```powershell
-cd C:\Users\Christian\.grok\bin\persona-studio
-pip install -r requirements.txt
+1. Add the following to your site's `_config.yml`:
+
+    ```yml
+    remote_theme: pages-themes/modernist@v0.2.0
+    plugins:
+    - jekyll-remote-theme # add this line to the plugins list if you already have one
+    ```
+
+2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
+
+    ```ruby
+    gem "github-pages", group: :jekyll_plugins
+    ```
+
+## Customizing
+
+### Configuration variables
+
+Modernist will respect the following variables, if set in your site's `_config.yml`:
+
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
 ```
 
-### 2. Set up API access
+Additionally, you may choose to set the following optional variables:
 
-**Option A — Already signed into Grok CLI (easiest):**
-
-If you ran `grok` and signed in, the app reads your credentials from `~/.grok/auth.json` automatically.
-
-**Option B — API key:**
-
-```powershell
-$env:XAI_API_KEY = "xai-your-key-here"
+```yml
+show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
 ```
 
-Get a key at [console.x.ai](https://console.x.ai).
+### Stylesheet
 
-### 3. Run the app
+If you'd like to add your own custom styles:
 
-**Background (recommended — no CMD window to keep open):**
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
 
-```powershell
-# One-time: auto-start at every Windows login + desktop shortcut + tray icon
-install-background.bat
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
 
-# Or start manually in the background now:
-python daemon.py start
-# Or double-click start-hidden.vbs (completely silent)
-```
+*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
 
-Open **http://127.0.0.1:7860** in your browser. A purple **tray icon** lets you Open / Quit.
+### Layouts
 
-**Foreground (dev / debugging):**
+If you'd like to change the theme's HTML layout:
 
-```powershell
-python app.py
-```
+1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/modernist/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/modernist/blob/master/_layouts/default.html).
+2. For more extensive changes, [copy the original template](https://github.com/pages-themes/modernist/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+3. Create a file called `/_layouts/default.html` in your site
+4. Paste the default layout content copied in the first step
+5. Customize the layout as you'd like
 
-Or double-click `run.bat` (starts background, then you can close the window).
+### Customizing Google Analytics code
 
-**Stop:** `python daemon.py stop` or double-click `stop.bat` or tray → Quit.
+Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
 
-## How to Use
+### Overriding GitHub-generated URLs
 
-### Setup a persona
+Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
 
-1. Go to **Setup Persona**
-2. Enter the character name and pick **anime**, **real**, or **fictional**
-3. Fill in appearance, personality, and how they talk (optional but helps a lot)
-4. Click **Research Online** to pull info from the web
-5. Upload **reference photos** for likeness
-6. Click **Create New Persona** or **Save Profile**
+1. Look at [the template source](https://github.com/pages-themes/modernist/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
+2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
+    ```yml
+    github:
+      zip_url: http://example.com/download.zip
+      another_url: another value
+    ```
+3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
 
-### Chat
+*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
 
-1. Open **Chat**
-2. Load your persona and start talking
-3. Enable **Search web for context** if you want live facts woven into replies
+For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
 
-### Images
+## Roadmap
 
-1. Open **Images**
-2. Describe what you want and click **Generate**
-3. For real people: upload a reference photo first
-4. Use **Edit Image** to restyle or change an existing picture
-5. Use **Find Images Online** to grab references
+See the [open issues](https://github.com/pages-themes/modernist/issues) for a list of proposed features (and known issues).
 
-## Tips
+## Project philosophy
 
-- **Anime / fictional**: works great with text descriptions; references optional
-- **Real people**: upload a clear face photo for best image results
-- **Better roleplay**: add speech style notes ("uses slang", "formal", "sarcastic")
-- **Stay in character**: the app blocks common AI phrases, but good profile notes help most
+The Modernist theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
 
-## Files
+## Contributing
 
-| Path | Purpose |
-|------|---------|
-| `app.py` | Main UI |
-| `persona.py` | Persona profiles & prompts |
-| `chat.py` | In-character chat |
-| `images.py` | Image gen/edit via xAI |
-| `search.py` | Web & image search |
-| `data/personas/` | Saved persona JSON files |
-| `data/uploads/` | Your uploaded references |
-| `data/generated/` | Generated/edited images |
+Interested in contributing to Modernist? We'd love your help. Modernist is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
 
-## Requirements
+### Previewing the theme locally
 
-- Python 3.10+
-- xAI API access (Grok sign-in or `XAI_API_KEY`)
-- Internet connection for search and images
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
+
+1. Clone down the theme's repository (`git clone https://github.com/pages-themes/modernist`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `bundle exec jekyll serve` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+
+### Running tests
+
+The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
